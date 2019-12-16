@@ -30,6 +30,7 @@ gnuArch="$(dpkg-architecture -qDEB_BUILD_GNU_TYPE)" \
     && cd python$python_version_short \
     && ./configure \
         --enable-ipv6 \
+        --enable-optimizations \
         --build="$gnuArch" \
         --enable-unicode=ucs4 \
         --prefix=$prefix \
