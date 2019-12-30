@@ -38,5 +38,5 @@ gnuArch="$(dpkg-architecture -qDEB_BUILD_GNU_TYPE)" \
     && make install
 
 echo "all done. be sure to add this to your path -> copy paste into your .bashrc/.zshrc"
-echo "export \"PATH=$prefix/bin:\$PATH\""
+echo "export PATH=\"$prefix/bin:\$PATH\""
 
