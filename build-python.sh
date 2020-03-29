@@ -2,12 +2,12 @@
 
 # requirements:
 # sudo apt-get install python-dev python3-dev
-# have the Python-3.8.0.tar.xz containing sources in the same folder
+# have the Python-3.8.2.tar.xz containing sources in the same folder
 
 # in case of install error for pycrypto, please check that the tmp is executable
 
 python_version_short=3.8
-python_version_precise=$python_version_short.0
+python_version_precise=$python_version_short.2
 
 # get rid of old pip cache that can conflict
 rm -Rf $HOME/.cache/pip
@@ -18,7 +18,10 @@ prefix=$PWD/python$python_version_short
 echo $prefix
 
 # get rid of previous symlink (useful when you want to upgrade the patch version)
-rm python$python_version_short
+if [ -h "python$python_version_short" ]; then
+    echo "deleting symlink"
+    rm python$python_version_short
+fi
 # get rid of the extraction of previous Sources, to be sure to start from scratch
 rm -Rf Python-$python_version_precise
 # re-extract
