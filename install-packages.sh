@@ -8,3 +8,5 @@ apt-get install -y \
  libreadline-dev \
  liblzma-dev \
  tk-dev
+
+# maybe libffi-dev

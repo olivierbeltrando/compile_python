@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 # requirements:
 # sudo apt-get install python-dev python3-dev
@@ -6,8 +6,12 @@
 
 # in case of install error for pycrypto, please check that the tmp is executable
 
-python_version_short=3.8
-python_version_precise=$python_version_short.2
+source version.sh
+python_version_short=$python_version_major.$python_version_minor
+python_version_precise=$python_version_short.$python_version_patch
+
+echo $python_version_short
+echo $python_version_precise
 
 # get rid of old pip cache that can conflict
 rm -Rf $HOME/.cache/pip
