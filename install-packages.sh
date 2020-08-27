@@ -7,6 +7,7 @@ apt-get install -y \
  libgdbm-dev \
  libreadline-dev \
  liblzma-dev \
+ libffi-dev \
  tk-dev
 
-# maybe libffi-dev
+# maybe
